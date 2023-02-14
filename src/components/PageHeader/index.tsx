@@ -1,12 +1,8 @@
-import React, { useContext } from 'react';
-import Cookies from 'js-cookie';
-// import avatarImg from 'assets/images/avatar.svg';
-import { useNavigate } from "react-router-dom";
-import styles from './styles.module.scss';
-import { Menu, Dropdown } from 'antd';
-import useToggleSideNav from 'utils/hooks/useToggleSideNav';
-import useProfile from 'utils/hooks/useProfile';
+import { Dropdown, Menu } from 'antd';
 import { logout } from 'utils/helper/authentication';
+import useProfile from 'utils/hooks/useProfile';
+import useToggleSideNav from 'utils/hooks/useToggleSideNav';
+import styles from './styles.module.scss';
 
 export default function PageHeader() {
   const { profile } = useProfile();

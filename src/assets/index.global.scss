@@ -1,1 +1,16 @@
 //global css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.btn-submit-login {
+  width: 279px;
+  border-radius: 50px;
+  height: 64px;
+  text-align: center;
+  font-size: 24px;
+  opacity: 0.5;
+}
+input:-internal-autofill-selected {
+  background: none;
+}

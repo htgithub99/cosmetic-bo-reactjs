@@ -1,79 +1,70 @@
-import { Button, Card, Checkbox, Form, Input, Row } from "antd";
+import { Button, Form, Input } from "antd";
+import MainContainer from "components/MainContainer";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import { Navigate } from "react-router-dom";
-import { login } from "utils/helper/authentication";
+import { Link, Navigate } from "react-router-dom";
+import { onErrorMessage } from "utils/helper/message";
 import styles from "./style.module.scss";
 
 export default function Login() {
   const { t } = useTranslation();
 
   const navigateToSignUp = () => {};
-  
-  const handleSubmit = async (payload: any) => {
-    login(payload);
+
+  const onFinish = async (payload: any) => {
+    onErrorMessage();
   };
 
-  const isAuthenticated = !!Cookies.get('token');
-  if (isAuthenticated) return <Navigate to="/" />;
+  // const isAuthenticated = !!Cookies.get("token");
+  // if (isAuthenticated) return <Navigate to="/" />;
 
   return (
-    <div className={styles.loginContainer}>
-      <Card bordered className={styles.loginForm}>
-        <Form onFinish={handleSubmit}>
-          <Row justify="center">
-            <h2>{t("common.login")}</h2>
-          </Row>
-          <Form.Item
-            label={t("common.email")}
-            name="email"
-            rules={[
-              {
-                required: true,
-                message: t("validate.usernameRequired"),
-              },
-            ]}
-            labelAlign="left"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label={t("common.password")}
-            name="password"
-            rules={[
-              { required: true, message: t("validate.passwordRequired") },
-            ]}
-            labelAlign="left"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-          >
-            <Input.Password />
-          </Form.Item>
-          <Form.Item name="rememberMe" valuePropName="checked">
-            <Checkbox> {t("common.rememberMe")}</Checkbox>
-          </Form.Item>
-          <Form.Item labelCol={{ span: 24 }}>
-            <Button block type="primary" htmlType="submit">
-              {t("common.login").toUpperCase()}
-            </Button>
-          </Form.Item>
-          <Form.Item labelCol={{ span: 24 }}>
-            <Button
-              block
-              type="dashed"
-              htmlType="button"
-              onClick={navigateToSignUp}
-            >
-              {t("common.signUp").toUpperCase()}
-            </Button>
-          </Form.Item>
-          <div>
-            <p>Account: admin / 123456</p>
+    <MainContainer>
+      <div className={styles.wrapLogin}>
+        <div className={styles.wrapHeader}>
+          <div className={styles.imgLogo}>
+            <img
+              src="https://sapo.dktcdn.net/sso-service/images/Sapo-logo.svg"
+              alt=""
+            />
           </div>
-        </Form>
-      </Card>
-    </div>
+          <h1>Đăng nhập vào cửa hàng của bạn</h1>
+          <p>
+            Truy cập cửa hàng{" "}
+            <Link to="#">www.bocosmetic.com</Link>
+          </p>
+        </div>
+        <div className={styles.wrapContent}>
+          <Form
+            name="basic"
+            labelCol={{ span: 24 }}
+            wrapperCol={{ span: 24 }}
+            onFinish={onFinish}
+            autoComplete="off"
+          >
+            <Form.Item name="username" rules={[{ required: true }]}>
+              <Input placeholder="Email/Số điện thoại của bạn" />
+            </Form.Item>
+
+            <Form.Item name="password" rules={[{ required: true }]}>
+              <Input.Password
+                type="password"
+                placeholder="Mật khẩu đăng nhập cửa hàng"
+                autoComplete="new-password"
+              />
+            </Form.Item>
+            <div className={styles.btnSubmitLogin}>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="btn-submit-login"
+              >
+                Đăng nhập
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </div>
+    </MainContainer>
   );
 }

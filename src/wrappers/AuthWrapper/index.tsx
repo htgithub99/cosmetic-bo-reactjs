@@ -5,12 +5,11 @@ import { Navigate, useOutlet } from "react-router-dom";
 import useProfile from "utils/hooks/useProfile";
 import styles from "./styles.module.scss";
 
-// const Tasks = lazy(() => import('pages/Tasks'));
-
 export default function PageWrapper() {
   const outlet = useOutlet();
   const isAuthenticated = !!Cookies.get("token");
   const { profile } = useProfile(isAuthenticated);
+  
   if (!isAuthenticated) return <Navigate to="/login" />;
   if (!profile) return null;
   
