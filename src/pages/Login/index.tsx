@@ -1,20 +1,15 @@
-import React from "react";
-// import { Redirect, useHistory } from 'react-router-dom';
+import { Button, Card, Checkbox, Form, Input, Row } from "antd";
 import Cookies from "js-cookie";
-import _ from "lodash";
-import styles from "./style.module.scss";
-import { Card, Input, Button, Form, Row, Checkbox } from "antd";
 import { useTranslation } from "react-i18next";
-import { login } from "utils/helper/authentication";
 import { Navigate } from "react-router-dom";
-// import { login } from 'api/authentication';
-// import { handleErrorMessage } from 'helper';
+import { login } from "utils/helper/authentication";
+import styles from "./style.module.scss";
 
 export default function Login() {
-  // const history = useHistory();
   const { t } = useTranslation();
 
   const navigateToSignUp = () => {};
+  
   const handleSubmit = async (payload: any) => {
     login(payload);
   };
