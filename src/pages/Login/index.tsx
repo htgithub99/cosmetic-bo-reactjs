@@ -1,8 +1,7 @@
 import { Button, Form, Input } from "antd";
 import MainContainer from "components/MainContainer";
-import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { onErrorMessage } from "utils/helper/message";
 import styles from "./style.module.scss";
 

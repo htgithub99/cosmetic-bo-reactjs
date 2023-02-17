@@ -1,7 +1,10 @@
 //global css
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap");
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Charis SIL", serif;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 }
 .btn-submit-login {
   width: 279px;
@@ -11,6 +14,11 @@ body {
   font-size: 24px;
   opacity: 0.5;
 }
+
 input:-internal-autofill-selected {
   background: none;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
