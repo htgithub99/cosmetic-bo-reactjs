@@ -2,7 +2,7 @@ import PageHeader from "components/PageHeader";
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import styles from "./styles.module.scss";
-
+const ProductDetail = lazy(() => import("pages/ProductDetail"));
 const Home = lazy(() => import("pages/Home"));
 
 export default function PageWrapper() {
@@ -20,6 +20,7 @@ export default function PageWrapper() {
           <Suspense>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/product/1" element={<ProductDetail />}/>
             </Routes>
           </Suspense>
         </div>

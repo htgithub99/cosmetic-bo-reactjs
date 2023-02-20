@@ -12,7 +12,7 @@ const ListProductItem = ({ data }: IProps) => {
       <Row gutter={[16, 16]}>
         {!!data?.length &&
           data?.map((item: ICardProduct) => (
-            <Col className="gutter-row" xs={24} sm={24} md={12} lg={12} xl={8}>
+            <Col className="gutter-row" xs={24} sm={24} md={12} lg={6} xl={6}>
               <CardProduct item={item as any} />
             </Col>
           ))}

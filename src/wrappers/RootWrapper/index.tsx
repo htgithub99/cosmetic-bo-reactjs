@@ -1,3 +1,4 @@
+
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import AuthWrapper from "wrappers/AuthWrapper";
@@ -9,7 +10,7 @@ export default function AppWrapper() {
     <div className="root-wrapper">
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<AuthWrapper />}>
+        <Route path="/*" element={<AuthWrapper />}>
         </Route>
       </Routes>
     </div>

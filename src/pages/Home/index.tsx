@@ -5,9 +5,9 @@ import {
   DATA_FAKE_LIST_PRODUCT,
   DATA_FAKE_LIST_PRODUCT_TYPE,
 } from "constants/json";
-import ListProductItem from "./components/ListProductItem";
-import ListProductType from "./components/ListProductType";
-import SliderBanner from "./components/SliderBanner";
+import ListProductItem from "../components/ListProductItem";
+import ListProductType from "../components/ListProductType";
+import SliderBanner from "../components/SliderBanner";
 import styles from "./styles.module.scss";
 
 const Home = () => {

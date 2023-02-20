@@ -1,11 +1,11 @@
 @import "assets/variables.scss";
 @import "assets/mixin.scss";
 .wrapPageHeader {
+  background-color: #262626;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
-  background: transparent;
   position: fixed;
   top: 0;
   right: 0;
@@ -25,10 +25,10 @@
           a {
             text-decoration: none;
             padding: 0 10px;
-            font-size: 15px;
+            font-size: 20px;
             line-height: 80px;
             font-weight: bold;
-            color: #262626;
+            color: white;
 
             &:hover,
             &:active {

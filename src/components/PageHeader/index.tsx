@@ -14,22 +14,19 @@ const PageHeader = () => {
           <div className={styles.left_ul}>
             <ul>
               <li>
-                <a href="Home">Home</a>
+                <a href="/">Trang chủ</a>
               </li>
               <li>
-                <a href="Home">About</a>
+                <a href="/product">Danh mục sản phẩm</a>
               </li>
               <li>
-                <a href="Home">Shop</a>
+                <a href="/flashsale">Flashsale</a>
               </li>
               <li>
-                <a href="Home">Blog</a>
+                <a href="/newproduct">Sản phẩm mới</a>
               </li>
               <li>
-                <a href="Home">Pages</a>
-              </li>
-              <li>
-                <a href="Home">Contact</a>
+                <a href="/contact">Hỗ trợ từ shop</a>
               </li>
             </ul>
           </div>
