@@ -11,11 +11,11 @@ const ListProductType = ({ data }: IProps) => {
       <Row gutter={[16, 16]}>
         {data?.map(
           ({
-            url,
+            category,
             id,
             background,
           }: {
-            url: string;
+            category: string;
             id: number;
             background: string;
           }) => (
@@ -35,9 +35,8 @@ const ListProductType = ({ data }: IProps) => {
                     background: background,
                   }}
                 >
-                  <img src={url} alt="productType" width={70} />
-                  <h4>Hare care</h4>
-                  <div className={styles.item___sale}>Sale</div>
+                  {/* <img src={url} alt="productType" width={70} /> */}
+                  <h4>{category}</h4>
                 </div>
               </Link>
             </Col>

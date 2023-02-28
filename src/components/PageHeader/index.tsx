@@ -17,7 +17,7 @@ const PageHeader = () => {
                 <a href="/">Trang chủ</a>
               </li>
               <li>
-                <a href="/product">Danh mục sản phẩm</a>
+                <a href="/products">Danh mục sản phẩm</a>
               </li>
               <li>
                 <a href="/flashsale">Flashsale</a>

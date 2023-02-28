@@ -1,0 +1,23 @@
+@import "assets/variables.scss";
+@import "assets/mixin.scss";
+
+.contact_info {
+  display: flex;
+  background: #fffaef;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+
+  .contact_info_item {
+    .icon {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    div {
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+}

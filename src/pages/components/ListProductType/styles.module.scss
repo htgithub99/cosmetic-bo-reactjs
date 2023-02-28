@@ -1,9 +1,11 @@
 .wrapProductType {
+  width: 80%;
+    margin: 0 auto;
   .productType__item {
     border-radius: 10px;
     // background-color: #dcffd2;
     display: block;
-    padding: 45px 15px 30px;
+    padding: 2px 15px 10px;
     height: 100%;
     position: relative;
     text-align: center;
@@ -31,20 +33,20 @@
       position: relative;
       padding-top: 11px;
 
-      &::before {
-        background-color: #ff6565;
-        content: "";
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        top: 0;
-        transform: translate(-50%);
-        -webkit-transform: translate(-50%);
-        -moz-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-        -o-transform: translate(-50%);
-        width: 25px;
-      }
+      // &::before {
+      //   background-color: #ff6565;
+      //   content: "";
+      //   height: 1px;
+      //   left: 50%;
+      //   position: absolute;
+      //   top: 0;
+      //   transform: translate(-50%);
+      //   -webkit-transform: translate(-50%);
+      //   -moz-transform: translate(-50%);
+      //   -ms-transform: translate(-50%);
+      //   -o-transform: translate(-50%);
+      //   width: 25px;
+      // }
     }
 
     .item___sale {

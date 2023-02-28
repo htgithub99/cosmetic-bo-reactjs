@@ -7,35 +7,55 @@ import productType6 from "assets/images/6.webp";
 
 export const DATA_FAKE_LIST_PRODUCT_TYPE = [
   {
-    url: productType1,
+   category: 'Tẩy da chết',
     id: 1,
     background: "#dcffd2",
   },
   {
-    url: productType2,
+   category: 'Tẩy trang',
     id: 2,
     background: "rgb(255, 237, 180)",
   },
   {
-    url: productType3,
+   category: 'Sữa rửa mặt',
     id: 3,
     background: "rgb(223, 228, 255)",
   },
   {
-    url: productType4,
+   category: 'Toner',
     id: 4,
     background: "rgb(255, 234, 204)",
   },
   {
-    url: productType5,
+   category: 'Kem dưỡng',
     id: 5,
     background: "rgb(255, 218, 224)",
   },
   {
-    url: productType6,
+   category: 'Kem chống nắng',
     id: 6,
     background: "rgb(255, 243, 218)",
   },
+  {
+    category: 'Kem dưỡng body',
+     id: 6,
+     background: "rgb(255, 243, 218)",
+   },
+   {
+    category: 'Dầu gội',
+     id: 6,
+     background: "rgb(255, 243, 218)",
+   },
+   {
+    category: 'Sữa tắm',
+     id: 6,
+     background: "rgb(255, 243, 218)",
+   },
+   {
+    category: 'Thực phẩm chức năng',
+     id: 6,
+     background: "rgb(255, 243, 218)",
+   },
 ];
 
 export const DATA_FAKE_LIST_PRODUCT = [
