@@ -3,6 +3,7 @@ import PageHeader from "components/PageHeader";
 import Contact from "pages/Contact";
 import Flashsale from "pages/Flashsale";
 import ProductPortfolio from "pages/ProductPortfolio";
+import ShoppingCard from "pages/ShoppingCard";
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import styles from "./styles.module.scss";
@@ -28,6 +29,7 @@ export default function PageWrapper() {
               <Route path="/product/1" element={<ProductDetail />}/>
               <Route path="/flashsale" element={<Flashsale />}/>
               <Route path="/contact" element={<Contact />}/>
+              <Route path="/shoppingcard" element={<ShoppingCard />}/>
             </Routes>
           </Suspense>
         </div>
